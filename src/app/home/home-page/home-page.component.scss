@@ -1,0 +1,19 @@
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    background-color: rgb(238, 234, 234);
+
+    position: absolute;
+    width: 1122px;
+    height: 1088px;
+    left: 145px;
+    top: 80px;
+}
+
+.header-section {
+    padding-left: 155px;
+}
