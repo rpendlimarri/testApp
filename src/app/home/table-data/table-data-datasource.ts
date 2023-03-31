@@ -4,13 +4,13 @@ import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
-// TODO: Replace this with your own data model type
+// (b/345343): Interface to work with Table data item
 export interface TableDataItem {
   name: string;
   id: number;
 }
 
-// TODO: replace this with real data from your application
+// (b/345343): This is the sample data to load into the Table
 const EXAMPLE_DATA: TableDataItem[] = [
   {id: 1, name: 'Hydrogen'},
   {id: 2, name: 'Helium'},
@@ -35,7 +35,7 @@ const EXAMPLE_DATA: TableDataItem[] = [
 ];
 
 /**
- * Data source for the TableData view. This class should
+ * (b/345343): Data source for the TableData view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
@@ -49,7 +49,7 @@ export class TableDataDataSource extends DataSource<TableDataItem> {
   }
 
   /**
-   * Connect this data source to the table. The table will only update when
+   * (b/345343): Connect this data source to the table. The table will only update when
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
@@ -67,13 +67,13 @@ export class TableDataDataSource extends DataSource<TableDataItem> {
   }
 
   /**
-   *  Called when the table is being destroyed. Use this function, to clean up
+   *  (b/345343): Called when the table is being destroyed. Use this function, to clean up
    * any open connections or free any held resources that were set up during connect.
    */
   disconnect(): void {}
 
   /**
-   * Paginate the data (client-side). If you're using server-side pagination,
+   * (b/345343): Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getPagedData(data: TableDataItem[]): TableDataItem[] {
@@ -86,7 +86,7 @@ export class TableDataDataSource extends DataSource<TableDataItem> {
   }
 
   /**
-   * Sort the data (client-side). If you're using server-side sorting,
+   * (b/345343): Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getSortedData(data: TableDataItem[]): TableDataItem[] {
@@ -105,7 +105,7 @@ export class TableDataDataSource extends DataSource<TableDataItem> {
   }
 }
 
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
+/** (b/345343): Simple sort comparator for example ID/Name columns (for client-side sorting). */
 function compare(a: string | number, b: string | number, isAsc: boolean): number {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

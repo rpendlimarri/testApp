@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
+// (b/22342): Class to work with Home page and it's childern components
 export class HomePageComponent {
-
 }

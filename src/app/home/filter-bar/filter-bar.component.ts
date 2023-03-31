@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.scss']
 })
-export class FilterBarComponent {
 
+// (b/12345): Class to work with Filter-bar and it's filters
+export class FilterBarComponent {
 }

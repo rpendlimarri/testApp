@@ -9,9 +9,6 @@ import { TableDataComponent } from './table-data/table-data.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-
-
-
 @NgModule({
   declarations: [
     FilterBarComponent,
@@ -31,4 +28,5 @@ import { MatSortModule } from '@angular/material/sort';
     HomePageComponent
   ]
 })
+// b(342332): This module is resonsible for holding the required modules for the Home page
 export class HomeModule { }
