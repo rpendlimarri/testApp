@@ -9,11 +9,18 @@ import { TableDataComponent } from './table-data/table-data.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule} from "@angular/material/button";
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     FilterBarComponent,
     HomePageComponent,
-    TableDataComponent
+    TableDataComponent,
+    PopupDialogComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +29,12 @@ import { MatSortModule } from '@angular/material/sort';
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatOptionModule
   ],
   exports: [
     HomePageComponent

@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Choose to compare</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>First Option</mat-label>
+        <mat-select [(value)]="selectedOption1">
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{option.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Second Option</mat-label>
+        <mat-select [(value)]="selectedOption2">
+          <mat-option *ngFor="let option of options" [value]="option.value">
+            {{option.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="{selectedOption1, selectedOption2}" cdkFocusInitial>Compare</button>
+  </div>

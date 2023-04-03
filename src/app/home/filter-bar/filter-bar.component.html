@@ -14,5 +14,13 @@
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
+
+  <div class="popup-component">
+    <button mat-raised-button (click)="openCompareDialog()">Compare</button>
+
+    <p *ngIf="selectedOption1 && selectedOption2">
+      Data comparision between these two optioons:  <b>{{selectedOption1}}</b> and <b>{{selectedOption2}}</b>
+    </p>
+  </div>
   
   </div>
