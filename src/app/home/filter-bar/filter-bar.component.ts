@@ -14,7 +14,9 @@ export class FilterBarComponent {
   selectedOption1!: string;
   selectedOption2!: string;
   search = "";
+
   constructor(public dialog: MatDialog) {}
+  
   openCompareDialog(): void {
     const dialogRef = this.dialog.open(PopupDialogComponent, {
       data: {option1: this.selectedOption1, option2: this.selectedOption2},
