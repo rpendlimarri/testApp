@@ -2,16 +2,18 @@ import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { PopupDialogComponent } from '../popup-dialog/popup-dialog.component';
 
+/**
+ * This class is responsible to work with filter-bar and it's components
+ */
 @Component({
   selector: 'app-filter-bar',
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.scss']
 })
-
-// (b/12345): Class to work with Filter-bar and it's filters
 export class FilterBarComponent {
   selectedOption1!: string;
   selectedOption2!: string;
+  search = "";
   constructor(public dialog: MatDialog) {}
   openCompareDialog(): void {
     const dialogRef = this.dialog.open(PopupDialogComponent, {

@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FilterBarComponent } from './filter-bar.component';
 
 describe('FilterBarComponent', () => {

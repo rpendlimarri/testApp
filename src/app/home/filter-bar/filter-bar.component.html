@@ -1,26 +1,6 @@
-<div class="filter-bar-section">
-
-
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+    <button mat-raised-button (click)="openCompareDialog()" class="compare-button">Compare</button>
   </mat-toolbar>
-
-  <div class="popup-component">
-    <button mat-raised-button (click)="openCompareDialog()">Compare</button>
-
-    <p *ngIf="selectedOption1 && selectedOption2">
-      Data comparision between these two optioons:  <b>{{selectedOption1}}</b> and <b>{{selectedOption2}}</b>
-    </p>
-  </div>
-  
-  </div>
+  <p *ngIf="selectedOption1 && selectedOption2">
+    Data comparision between these two optioons:  <b>{{selectedOption1}}</b> and <b>{{selectedOption2}}</b>
+  </p>

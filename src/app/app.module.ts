@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+/**
+ * This module holds the declarations, imports, and exports from the main app module
+*/ 
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +22,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent]
 })
-/** (b/232424) : This module holds the declarations, 
-imports and exports from the main app module */ 
+
 export class AppModule { }

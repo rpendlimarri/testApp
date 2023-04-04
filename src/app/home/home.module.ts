@@ -15,6 +15,12 @@ import { MatButtonModule} from "@angular/material/button";
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+
+/**
+ * This module is resonsible for holding the required modules for the Home page
+ */
 @NgModule({
   declarations: [
     FilterBarComponent,
@@ -34,11 +40,12 @@ import { MatOptionModule } from '@angular/material/core';
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    FormsModule,
+    MatInputModule
   ],
   exports: [
     HomePageComponent
   ]
 })
-// b(342332): This module is resonsible for holding the required modules for the Home page
 export class HomeModule { }
