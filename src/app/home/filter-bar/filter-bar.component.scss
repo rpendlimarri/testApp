@@ -1,0 +1,11 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-toolbar-single-row {
+    padding: 0 50px;
+    justify-content: flex-end;
+  }
+  .filter-bar-section {
+    display: flex;
+    order: 2;
+  }

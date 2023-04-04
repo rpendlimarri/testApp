@@ -1,0 +1,6 @@
+<mat-toolbar>
+    <button mat-raised-button (click)="openCompareDialog()" class="compare-button">Compare</button>
+  </mat-toolbar>
+  <p *ngIf="selectedOption1 && selectedOption2">
+    Data comparision between these two optioons:  <b>{{selectedOption1}}</b> and <b>{{selectedOption2}}</b>
+  </p>
