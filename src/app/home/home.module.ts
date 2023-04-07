@@ -17,6 +17,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { DataAccordionComponent } from './data-accordion/data-accordion.component';
+import { CdkAccordionModule } from "@angular/cdk/accordion";
 
 /**
  * This module is resonsible for holding the required modules for the Home page
@@ -26,7 +28,8 @@ import { MatInputModule } from '@angular/material/input';
     FilterBarComponent,
     HomePageComponent,
     TableDataComponent,
-    PopupDialogComponent
+    PopupDialogComponent,
+    DataAccordionComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +45,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSelectModule,
     MatOptionModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    CdkAccordionModule
   ],
   exports: [
     HomePageComponent
